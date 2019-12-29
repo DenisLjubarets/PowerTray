@@ -11,4 +11,4 @@ PowerTray is a small tray app that forces Windows to shutdown without prompting 
 <a href="https://github.com/DenisLjubarets/PowerTray/raw/master/Files/PowerTray.zip"><b>>> Download <<</b></a><br>
 <br>
 <hr>
-<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
