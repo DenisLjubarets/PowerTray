@@ -1,0 +1,17 @@
+﻿<Application x:Class="PowerTray.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Views/MainView.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views/Styles/Colors.xaml"/>
+                <ResourceDictionary Source="Views/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="Views/Styles/CheckBoxes.xaml"/>
+                <ResourceDictionary Source="Views/Styles/Borders.xaml"/>
+                <ResourceDictionary Source="Views/Styles/Labels.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:PowerTray.Views.Styles">
+    
+    <Color x:Key="BackgroundColor">#151515</Color>
+    <Color x:Key="QuitButtonBackgroundColor">#CC4545</Color>
+    <Color x:Key="ForegroundColor">#FCFCFC</Color>
+    <Color x:Key="SelectedColor">#353535</Color>
+    <Color x:Key="BorderColor">#000000</Color>
+
+    <SolidColorBrush x:Key="Background" Color="{DynamicResource BackgroundColor}" />
+    <SolidColorBrush x:Key="QuitButtonBackground" Color="{DynamicResource QuitButtonBackgroundColor}" />
+    <SolidColorBrush x:Key="Foreground" Color="{DynamicResource ForegroundColor}" />
+    <SolidColorBrush x:Key="Selected" Color="{DynamicResource SelectedColor}" />
+    <SolidColorBrush x:Key="Border" Color="{DynamicResource SelectedColor}" />
+    
+</ResourceDictionary>

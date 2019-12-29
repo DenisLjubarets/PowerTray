@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="PowerTray.Views.PowerButtonsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border Style="{StaticResource Border}">
+        <StackPanel>
+            <Button Content="Shutdown"  Style="{StaticResource PowerButton}" Click="Shutdown_Click"/>
+            <Button Content="Restart"   Style="{StaticResource PowerButton}" Click="Restart_Click"/>
+            <Button Content="Sleep"     Style="{StaticResource PowerButton}" Click="Sleep_Click"/>
+            <Button Content="Hibernate" Style="{StaticResource PowerButton}" Click="Hibernate_Click"/>
+            <Button Content="Logoff"    Style="{StaticResource PowerButton}" Click="Logoff_Click"/>
+            <Button Content="Lock"      Style="{StaticResource PowerButton}" Click="Lock_Click"/>
+        </StackPanel>
+    </Border>
+
+</UserControl>
