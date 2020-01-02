@@ -12,31 +12,37 @@ namespace PowerTray.Views
         {
             InitializeComponent();
 
-            CheckBoxForceShutdown.IsChecked = Properties.Settings.Default.ForceShutdownEnabled;
-            CheckBoxForceRestart.IsChecked = Properties.Settings.Default.ForceRestartEnabled;
-            CheckBoxStartWithOS.IsChecked = AppSettings.StartWithWindows;
+            CheckBoxForceShutdown.IsChecked = AppSettings.ForceShutdownEnabled;
+            CheckBoxForceRestart.IsChecked = AppSettings.ForceRestartEnabled;
+            CheckBoxStartWithOS.IsChecked = AppSettings.StartWithOSEnabled;
         }
 
         private void CheckBoxForceShutdown_Changed(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.ForceShutdownEnabled = CheckBoxForceShutdown.IsChecked ?? false;
-            Properties.Settings.Default.Save();
+            AppSettings.ForceShutdownEnabled = CheckBoxForceShutdown.IsChecked ?? false;
         }
 
         private void CheckBoxForceRestart_Changed(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.ForceRestartEnabled = CheckBoxForceRestart.IsChecked ?? false;
-            Properties.Settings.Default.Save();
+            AppSettings.ForceRestartEnabled = CheckBoxForceRestart.IsChecked ?? false;
         }
 
         private void CheckBoxStartWithOS_Changed(object sender, RoutedEventArgs e)
         {
-            AppSettings.StartWithWindows = CheckBoxStartWithOS.IsChecked ?? false;
+            AppSettings.StartWithOSEnabled = CheckBoxStartWithOS.IsChecked ?? false;
+            if (AppSettings.StartWithOSEnabled)
+            {
+                AppSettings.CreateStartupShortcut();
+            }
+            else
+            {
+                AppSettings.RemoveStartupShortcut();
+            }
         }
 
         private void Quit_Clicked(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            Application.Current.MainWindow.Close();
         }
 
     }

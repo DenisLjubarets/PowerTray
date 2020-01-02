@@ -16,13 +16,13 @@ namespace PowerTray.Models
 
         public static void Shutdown()
         {
-            string args = Properties.Settings.Default.ForceShutdownEnabled ? "/s /f /t 0" : "/s /t 0";
+            string args = AppSettings.ForceShutdownEnabled ? "/s /f /t 0" : "/s /t 0";
             Process.Start("shutdown", args);
         }
 
         public static void Restart()
         {
-            string args = Properties.Settings.Default.ForceRestartEnabled ? "/r /f /t 0" : "/r /t 0";
+            string args = AppSettings.ForceRestartEnabled ? "/r /f /t 0" : "/r /t 0";
             Process.Start("shutdown", args);
         }
 

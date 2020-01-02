@@ -1,4 +1,5 @@
 ﻿using PowerTray.Models;
+using System.ComponentModel;
 
 namespace PowerTray.Views
 {
@@ -7,7 +8,14 @@ namespace PowerTray.Views
         public MainView()
         {
             InitializeComponent();
-            AppSettings.CopyApplicationToAppData();
+            new AppSettings();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Taskbar.Visibility = System.Windows.Visibility.Collapsed;
+            Taskbar.Dispose();
+            base.OnClosing(e);
         }
     }
 }
