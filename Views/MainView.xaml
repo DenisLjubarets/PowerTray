@@ -6,7 +6,7 @@
         Visibility="Hidden" WindowStyle="None" Opacity="0" AllowsTransparency="True">
 
     <Grid>
-        <tb:TaskbarIcon IconSource="/Icons/icon.ico" ToolTipText="PowerTray v1.0" PopupActivation="LeftOrDoubleClick" MenuActivation="RightClick" >
+        <tb:TaskbarIcon Name="Taskbar" IconSource="/Icons/icon.ico" ToolTipText="PowerTray v1.0" PopupActivation="LeftOrDoubleClick" MenuActivation="RightClick" >
             <tb:TaskbarIcon.TrayPopup>
                 <local:PowerButtonsUserControl/>
             </tb:TaskbarIcon.TrayPopup>
