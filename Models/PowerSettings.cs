@@ -4,7 +4,8 @@ using System.Runtime.InteropServices;
 namespace PowerTray.Models
 {
     public static class PowerSettings
-    { 
+    {
+
         [DllImport("user32")]
         private static extern bool ExitWindowsEx(uint uFlags, uint dwReason);
 
@@ -45,5 +46,6 @@ namespace PowerTray.Models
         {
             LockWorkStation();
         }
+
     }
 }

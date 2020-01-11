@@ -1,13 +1,12 @@
 ﻿using PowerTray.Models;
-using System;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace PowerTray.Views
 {
-
     public partial class SettingsUserControl : UserControl
     {
+
         public SettingsUserControl()
         {
             InitializeComponent();

@@ -9,14 +9,16 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
             <Grid Name="TopLabel" Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
+                
                 <Label Grid.Row="0" Content="PowerTray Settings" Style="{StaticResource HeaderLabel}"/>
                 <Grid Grid.Row="1" Background="{StaticResource Selected}" Width="Auto" Height="2" VerticalAlignment="Top"/>
+                
             </Grid>
 
             <Grid Name="CheckBoxes" Grid.Row="1" HorizontalAlignment="Center">
@@ -25,6 +27,7 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
+                
                 <CheckBox x:Name="CheckBoxForceShutdown"  
                           Content="Force shutdown"
                           Grid.Row="0" 
@@ -43,38 +46,12 @@
                           Style="{StaticResource CheckBox}"
                           Checked="CheckBoxStartWithOS_Changed"
                           Unchecked="CheckBoxStartWithOS_Changed"/>
+                
             </Grid>
 
             <Grid Name="ButtomButton" Grid.Row="2" Height="80">
-                <Button Content="Quit PowerTray"
-                    Style="{StaticResource QuitButton}"
-                    Click="Quit_Clicked"/>
+                <Button Content="Quit PowerTray" Style="{StaticResource QuitButton}" Click="Quit_Clicked"/>
             </Grid>
         </Grid>
-        <!--<StackPanel>
-            <Label Content="PowerTray Settings" Margin="0,15" FontWeight="Bold" Foreground="#FAFAFA" HorizontalAlignment="Center"/>
-            <Grid Background="#434343" Width="Auto" Height="2"/>
-            <CheckBox x:Name="CheckBoxForceShutdown"  
-                      Content="Force shutdown"
-                      Margin="20,5" 
-                      Style="{StaticResource CheckBox}" 
-                      Checked="CheckBoxForceShutdown_Changed"
-                      Unchecked="CheckBoxForceShutdown_Changed"/>
-            <CheckBox x:Name="CheckBoxForceRestart" 
-                      Content="Force restart"
-                      Margin="20,5"
-                      Style="{StaticResource CheckBox}"   
-                      Checked="CheckBoxForceRestart_Changed"
-                      Unchecked="CheckBoxForceRestart_Changed"/>
-            <CheckBox x:Name="CheckBoxStartWithOS" 
-                      Content="Start with Windows" 
-                      Margin="20,5"  
-                      Style="{StaticResource CheckBox}"
-                      Checked="CheckBoxStartWithOS_Changed"
-                      Unchecked="CheckBoxStartWithOS_Changed"/>
-            <Button Content="Quit PowerTray" 
-                    Style="{StaticResource QuitButton}"
-                    Click="Quit_Clicked"/>
-        </StackPanel>-->
     </Border>
 </UserControl>

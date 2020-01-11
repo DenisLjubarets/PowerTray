@@ -8,7 +8,11 @@ namespace PowerTray.Views
         public MainView()
         {
             InitializeComponent();
-            new AppSettings();
+            AppSettings.CopyApplicationToAppData();
+            if (AppSettings.StartWithOSEnabled == true)
+            {
+                AppSettings.CreateStartupShortcut();
+            }
         }
 
         protected override void OnClosing(CancelEventArgs e)
